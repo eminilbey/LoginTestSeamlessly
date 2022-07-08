@@ -42,14 +42,14 @@ Feature: Login Functionality
 
   @SEAMLES-1969 @wip
   Scenario:
-    When user enters "invalidUsername" as invalidUsername
+    When user enters faker username
     And user enters "Employee123" as password
     And user clicks login button
     Then Wrong username or password Message Displayed
 
   @SEAMLES-1970 @wip
   Scenario:
-    When user enters "Employee1" as invalidUsername
+    When user enters "Employee1" as username
     And user enters "invalidPassword" as invalidPassword
     And user clicks login button
     Then Wrong username or password Message Displayed

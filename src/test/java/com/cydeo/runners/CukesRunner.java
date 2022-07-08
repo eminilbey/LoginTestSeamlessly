@@ -16,7 +16,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",//links to the "features" packagee
         glue = "com/cydeo/step_definitions",//Links to the "step_definitions" package
         dryRun = false,
-        tags = "@SEAMLES-1962",
+        tags = "@SEAMLES-1969",
         publish = true//creates a link of web browser on the console that includes a report so that the report page can be shared
 
 

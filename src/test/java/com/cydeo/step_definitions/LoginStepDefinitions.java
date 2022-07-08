@@ -3,6 +3,7 @@ package com.cydeo.step_definitions;
 import com.cydeo.pages.LoginPage;
 import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.Driver;
+import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -31,9 +32,11 @@ public class LoginStepDefinitions {
 
     }
 
-    @When("user enters {string} as invalidUsername")
-    public void userEntersAsInvalidUsername(String invalidUsername) {
-        loginPage.userName.sendKeys(invalidUsername);
+    @When("user enters faker username")
+    public void userEntersFakerUsername() {
+        Faker faker = new Faker();
+        String fakeUsername = faker.name().username();
+        loginPage.userName.sendKeys(fakeUsername);
     }
 
     @And("user enters {string} as password")
